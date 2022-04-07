@@ -17,16 +17,14 @@ from recommenders.datasets.amazon_reviews import download_and_extract, data_prep
 from recommenders.datasets.download_utils import maybe_download
 # Models
 from recommenders.models.deeprec.models.sequential.sli_rec import SLI_RECModel as SeqModel1
-from recommenders.models.deeprec.models.sequential.asvd import A2SVDModel as SeqModel2
-from recommenders.models.deeprec.models.sequential.gru4rec import GRU4RecModel as SeqModel3
-from recommenders.models.deeprec.models.sequential.sum import SUMModel as SeqModel4
+from recommenders.models.deeprec.models.sequential.gru4rec import GRU4RecModel as SeqModel2
+from recommenders.models.deeprec.models.sequential.sum import SUMModel as SeqModel3
 from recommenders.models.deeprec.io.sequential_iterator import SequentialIterator
 
 # Config files
 yaml_file1 = 'recommenders/models/deeprec/config/sli_rec.yaml'  
-yaml_file2 = 'recommenders/models/deeprec/config/asvd.yaml'  
-yaml_file3 = 'recommenders/models/deeprec/config/gru4rec.yaml'  
-yaml_file4 = 'recommenders/models/deeprec/config/sum.yaml'  
+yaml_file2 = 'recommenders/models/deeprec/config/gru4rec.yaml'  
+yaml_file3 = 'recommenders/models/deeprec/config/sum.yaml'  
 
 # Parameters
 EPOCHS = 10
@@ -104,32 +102,16 @@ hparams3 = prepare_hparams(yaml_file3,
                           train_num_ngs=train_num_ngs # provides the number of negative instances for each positive instance for loss computation.
             )
 
-hparams4 = prepare_hparams(yaml_file4, 
-                          embed_l2=0., 
-                          layer_l2=0., 
-                          learning_rate=0.001,  # set to 0.01 if batch normalization is disable
-                          epochs=EPOCHS,
-                          batch_size=BATCH_SIZE,
-                          show_step=20,
-                          user_vocab=user_vocab,
-                          item_vocab=item_vocab,
-                          cate_vocab=cate_vocab,
-                          need_sample=True,
-                          train_num_ngs=train_num_ngs # provides the number of negative instances for each positive instance for loss computation.
-            )
-
 # Data loaders
 input_creator1 = SequentialIterator
 input_creator2 = SequentialIterator
 input_creator3 = SequentialIterator
-input_creator4 = SequentialIterator
 
 # Instantiate models
 model1 = SeqModel1(hparams1, input_creator1, seed=RANDOM_SEED)
 model2 = SeqModel2(hparams2, input_creator2, seed=RANDOM_SEED)
 model3 = SeqModel3(hparams3, input_creator3, seed=RANDOM_SEED)
-model4 = SeqModel4(hparams4, input_creator4, seed=RANDOM_SEED)
-model_list = [model1, model2, model3, model4]
+model_list = [model1, model2, model3]
 # Get model names
 model_names = [str(x).replace("<recommenders.models.deeprec.models.sequential.","").
                split()[0].split(".")[1].replace("Model","") for x in model_list]
