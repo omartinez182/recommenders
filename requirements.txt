@@ -18,7 +18,7 @@ pybind11==2.9.2
 pydocumentdb==2.3.5
 pymanopt==0.2.5
 pyspark==3.2.1
-pytest==3.6.4
+pytest
 pytest_mock==3.7.0
 PyYAML==6.0
 requests==2.23.0
