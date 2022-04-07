@@ -33,4 +33,5 @@ tensorflow_estimator==2.8.0
 tf_slim==1.1.0
 torch==1.10.0+cu111
 tqdm==4.63.0
+argparse
 transformers==4.18.0
