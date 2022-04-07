@@ -42,8 +42,8 @@ item_vocab = os.path.join(data_path, r'item_vocab.pkl')
 cate_vocab = os.path.join(data_path, r'category_vocab.pkl')
 output_file = os.path.join(data_path, r'output.txt')
 
-reviews_name = 'reviews_Amazon_Fashion.json'
-meta_name = 'meta_Amazon_Fashion.json'
+reviews_name = 'reviews_Beauty_5.json'
+meta_name = 'meta_All_Beauty.json'
 reviews_file = os.path.join(data_path, reviews_name)
 meta_file = os.path.join(data_path, meta_name)
 train_num_ngs = 4 # number of negative instances with a positive instance for training
