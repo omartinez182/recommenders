@@ -61,7 +61,7 @@ if not os.path.exists(train_file):
     data_preprocessing(*input_files, sample_rate=sample_rate, valid_num_ngs=valid_num_ngs, test_num_ngs=test_num_ngs)
 
 # Hyperparameters
-hparams1 = prepare_hparams(yaml_file11, 
+hparams1 = prepare_hparams(yaml_file1, 
                           embed_l2=0., 
                           layer_l2=0., 
                           learning_rate=0.001,  # set to 0.01 if batch normalization is disable
