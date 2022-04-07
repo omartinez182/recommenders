@@ -2,7 +2,7 @@ azureml==0.2.7
 category_encoders==2.4.0
 databricks_cli==0.16.6
 fastprogress==1.0.2
-ipython==8.2.0
+ipython==7.32.0
 joblib==1.1.0
 keras==2.8.0
 matplotlib==3.2.2
