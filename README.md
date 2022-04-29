@@ -1,7 +1,7 @@
 # Benchmarking of Sequence & Session-Based Recommenders
  
 
-This repository was forked from the [Microsoft Recommenders](https://github.com/microsoft/recommenders) repo. Our goal was to provide a script to run experiments and provide some benchmarks for different recommendation algorithms, mainly we are interested in benchmarking the [SLi-Rec](https://www.microsoft.com/en-us/research/uploads/prod/2019/07/IJCAI19-ready_v1.pdf), [GRU4Rec](https://arxiv.org/pdf/1511.06939.pdf), and the [SUM](https://arxiv.org/pdf/2102.09211.pdf) recommenders.
+This repository was forked from the [Microsoft Recommenders](https://github.com/microsoft/recommenders) repo. Our goal was to provide a script to run experiments and provide some benchmarks for different recommendation algorithms, mainly we were interested in benchmarking the [SLi-Rec](https://www.microsoft.com/en-us/research/uploads/prod/2019/07/IJCAI19-ready_v1.pdf), [GRU4Rec](https://arxiv.org/pdf/1511.06939.pdf), and the [SUM](https://arxiv.org/pdf/2102.09211.pdf) recommenders.
 
 
 ## Getting Started
